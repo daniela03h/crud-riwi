@@ -79,3 +79,12 @@ export function create(name, lastName, email, coders) {
 
   coders.push(newCoder)
 }
+
+
+export function deleteItem(coders,idParaEliminar){
+  coders.forEach((coder,index) => {
+      if (coder.id == idParaEliminar) {
+        coders.splice(index,1)
+      }
+    });
+}
